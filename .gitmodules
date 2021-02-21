@@ -1,0 +1,33 @@
+[submodule "luci-app-vssr"]
+	path = luci-app-vssr
+	url = https://github.com/jerrykuku/luci-app-vssr.git
+[submodule "lua-maxminddb"]
+	path = lua-maxminddb
+	url = https://github.com/jerrykuku/lua-maxminddb.git
+[submodule "luci-app-jd-dailybonus"]
+	path = luci-app-jd-dailybonus
+	url = https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+[submodule "luci-app-autotimeset"]
+	path = luci-app-autotimeset
+	url = https://github.com/sirpdboy/luci-app-autotimeset.git
+[submodule "luci-app-bypass"]
+	path = luci-app-bypass
+	url = https://github.com/garypang13/luci-app-bypass.git
+[submodule "luci-app-dnsfilter"]
+	path = luci-app-dnsfilter
+	url = https://github.com/garypang13/luci-app-dnsfilter.git
+[submodule "OpenAppFilter"]
+	path = OpenAppFilter
+	url = https://github.com/destan19/OpenAppFilter.git
+[submodule "linkease-openwrt"]
+	path = linkease-openwrt
+	url = https://github.com/linkease/linkease-openwrt.git
+[submodule "luci-app-argon-config"]
+	path = luci-app-argon-config
+	url = https://github.com/jerrykuku/luci-app-argon-config.git
+[submodule "luci-theme-argon"]
+	path = luci-theme-argon
+	url = https://github.com/jerrykuku/luci-theme-argon.git
+[submodule "ddnsto-openwrt"]
+	path = ddnsto-openwrt
+	url = https://github.com/linkease/ddnsto-openwrt.git
