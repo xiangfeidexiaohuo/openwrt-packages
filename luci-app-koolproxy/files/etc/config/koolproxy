@@ -1,0 +1,38 @@
+
+config global
+	option time_update '4'
+	option koolproxy_port '0'
+	option startup_delay '5'
+	option koolproxy_acl_default '0'
+	option koolproxy_mode '2'
+	option koolproxy_host '1'
+	option koolproxy_rules 'kp.dat user.txt'
+	option enabled '0'
+
+config rss_rule
+        option name 'ABP规则'
+        option url 'https://raw.githubusercontent.com/ycg31/KoolProxy/master/rules/easylistchina.txt'
+        option file 'easylistchina.txt'
+        option load '0'
+        option time '2019-04-28 20:58'
+
+config rss_rule
+	option load '0'
+	option name 'Fanboy'
+	option url 'https://raw.githubusercontent.com/ycg31/KoolProxy/master/rules/fanboy.txt'
+	option file 'fanboy.txt'
+	option time '2019-08-10 08:32'
+	
+config rss_rule
+	option name 'AdGuardHome规则'
+	option url 'https://raw.githubusercontent.com/ycg31/KoolProxy/master/rules/AdGuardHome.txt'
+	option file 'AdGuardHome.txt'
+	option load '0'
+	option time '2019-06-28 20:58'
+	
+config rss_rule
+	option name 'yhosts规则'
+	option url 'https://raw.githubusercontent.com/ycg31/KoolProxy/master/rules/yhosts.txt'
+	option file 'yhosts.txt'
+	option load '0'
+	option time '2019-09-28 20:58'
