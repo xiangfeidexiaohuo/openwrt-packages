@@ -28,6 +28,7 @@
 [submodule "luci-theme-argon"]
 	path = luci-theme-argon
 	url = https://github.com/jerrykuku/luci-theme-argon.git
+	branch = 18.06
 [submodule "ddnsto-openwrt"]
 	path = ddnsto-openwrt
 	url = https://github.com/linkease/ddnsto-openwrt.git
