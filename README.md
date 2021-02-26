@@ -1,7 +1,8 @@
 # openwrt-packages
 
-建议使用Lean源进行编译。
+建议使用Lean源码进行编译。
 
+[Lean源码](https://github.com/coolsnowwolf/lede)
 
 
 ## 使用方法：
@@ -35,7 +36,6 @@
 | luci-app-autotimeset | 定时设置(重启、关机等) |
 | luci-app-bypass | 一款翻墙插件 |
 | luci-app-dnsfilter | 一款去广告插件 |
-| luci-app-eqos | 简易QOS |
 | luci-app-jd-dailybonus | 京豆签到 |
 | luci-app-koolproxy | kp去广告 |
 | luci-app-koolproxyR | kpr去广告 |
