@@ -48,3 +48,4 @@
 | luci-app-dockerman | Docker管理 |
 | luci-app-homeconnect | IPSecVPN客户端 |
 | luci-app-homeredirect | 端口转发工具 |
+| luci-app-serverchan | Server酱微信/Telegram 推送 |

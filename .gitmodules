@@ -29,3 +29,6 @@
 [submodule "ddnsto-openwrt"]
 	path = ddnsto-openwrt
 	url = https://github.com/linkease/ddnsto-openwrt.git
+[submodule "luci-app-serverchan"]
+	path = luci-app-serverchan
+	url = https://github.com/tty228/luci-app-serverchan
