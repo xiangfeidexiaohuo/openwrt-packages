@@ -7,9 +7,6 @@
 [submodule "luci-app-jd-dailybonus"]
 	path = luci-app-jd-dailybonus
 	url = https://github.com/jerrykuku/luci-app-jd-dailybonus.git
-[submodule "luci-app-autotimeset"]
-	path = luci-app-autotimeset
-	url = https://github.com/sirpdboy/luci-app-autotimeset.git
 [submodule "luci-app-bypass"]
 	path = luci-app-bypass
 	url = https://github.com/garypang13/luci-app-bypass.git
