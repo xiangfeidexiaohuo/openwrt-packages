@@ -45,3 +45,6 @@
 | smartdns | smartdns依赖 |
 | luci-app-syncdial | 支持ipv6的多拨 |
 | luci-app-adguardhome | ADG去广告 |
+| luci-app-dockerman | Docker管理 |
+| luci-app-homeconnect | IPSecVPN客户端 |
+| luci-app-homeredirect | 端口转发工具 |
