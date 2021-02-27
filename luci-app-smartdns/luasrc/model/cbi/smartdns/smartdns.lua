@@ -92,15 +92,6 @@ o.cfgvalue    = function(...)
     return Flag.cfgvalue(...) or "0"
 end
 
----- Anti-AD
-o = s:taboption("settings", Flag, "anti_ad", translate("Anti-AD"), 
-	translate("Block Ads."))
-o.rmempty     = false
-o.default     = o.disabled
-o.cfgvalue    = function(...)
-    return Flag.cfgvalue(...) or "0"
-end
-
 ---- Redirect
 o = s:taboption("settings", ListValue, "redirect", translate("Redirect"), translate("SmartDNS redirect mode"))
 o.placeholder = "none"
