@@ -18,6 +18,28 @@
  `./scripts/feeds install -a`
 
 
+## 提醒
+
+Lean源码自带了某些老版本的插件，建议提前删除
+
+ `rm -rf ./package/lean/k3screenctrl`
+
+ `rm -rf ./package/lean/luci-app-netdata`
+
+ `rm -rf ./package/lean/luci-app-syncdial`
+
+ `rm -rf ./package/lean/luci-lib-docker`
+
+ `rm -rf ./package/lean/luci-theme-argon`
+
+ `rm -rf ./package/lean/luci-app-jd-dailybonus`
+
+ `rm -rf ./package/lean/luci-app-diskman`
+
+然后拉取我的源码，`./scripts/feeds install -a`完成后再进行如下操作:
+
+ `ln -s -f ../../../feeds/xiangfeidexiaohuo/k3screenctrl package/feeds/xiangfeidexiaohuo/k3screenctrl`
+
 
 ## 插件说明：
 
