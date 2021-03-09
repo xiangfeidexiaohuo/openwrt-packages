@@ -24,8 +24,6 @@ Lean源码自带了某些老版本的插件，建议提前删除
 
  `rm -rf ./package/lean/k3screenctrl`
 
- `rm -rf ./package/lean/luci-app-netdata`
-
  `rm -rf ./package/lean/luci-app-syncdial`
 
  `rm -rf ./package/lean/luci-lib-docker`
@@ -61,7 +59,6 @@ Lean源码自带了某些老版本的插件，建议提前删除
 | luci-app-jd-dailybonus | 京豆签到 |
 | luci-app-koolproxy | kp去广告 |
 | luci-app-koolproxyR | kpr去广告 |
-| luci-app-netdata | 设备监控(已添加中文) |
 | luci-app-poweroff | 单独的关机 |
 | luci-app-smartdns | smartdns插件 |
 | smartdns | smartdns依赖 |
