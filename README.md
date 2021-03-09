@@ -68,3 +68,4 @@ Lean源码自带了某些老版本的插件，建议提前删除
 | luci-app-homeconnect | IPSecVPN客户端 |
 | luci-app-homeredirect | 端口转发工具 |
 | luci-app-serverchan | Server酱微信/Telegram 推送 |
+| luci-app-diskman | 磁盘管理 |
