@@ -39,6 +39,12 @@ Lean源码自带了某些老版本的插件，建议提前删除
  `ln -s -f ../../../feeds/xiangfeidexiaohuo/k3screenctrl package/feeds/xiangfeidexiaohuo/k3screenctrl`
 
 
+## files-补充汉化
+
+ `cp -f ./feeds/xiangfeidexiaohuo/files/udpxy.lua ./feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi`
+
+ `cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-app-mwan3/po/zh-cn`
+
 ## 插件说明：
 
 |插件名|功能|
