@@ -49,6 +49,9 @@ Lean源码自带了某些老版本的插件，建议提前删除
 
 |插件名|功能|
 | :----: | :----: |
+| openwrt-passwall | xiaorouji的passwall翻墙插件全套 |
+| helloworld/luci-app-ssr-plus | 大雕的ssr-plus翻墙插件(所需依赖passwall已包含) |
+| OpenClash/luci-app-openclash | OpenClash翻墙插件 |
 | OpenAppFilter | app进行管控，应用过滤 |
 | ddnsto | 远程设备管理 |
 | k3screenctrl | 斐讯K3屏幕套件 |
