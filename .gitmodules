@@ -32,3 +32,6 @@
 [submodule "luci-app-serverchan"]
 	path = luci-app-serverchan
 	url = https://github.com/tty228/luci-app-serverchan
+[submodule "openwrt-passwall"]
+	path = openwrt-passwall
+	url = https://github.com/xiaorouji/openwrt-passwall.git
