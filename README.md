@@ -10,40 +10,49 @@
 添加 `src-git xiangfeidexiaohuo https://github.com/xiangfeidexiaohuo/openwrt-packages` 到OpenWRT源码根目录feeds.conf.default文件
 
 然后执行
+```
+./scripts/feeds clean
 
- `./scripts/feeds clean` 
+./scripts/feeds update -a 
 
- `./scripts/feeds update -a` 
-
- `./scripts/feeds install -a`
-
+./scripts/feeds install -a
+```
 
 ## 提醒
 
-Lean源码自带了某些老版本的插件，建议提前删除
+### Lean源码自带了某些老版本的插件，建议提前删除
+```
+rm -rf ./package/lean/k3screenctrl
 
- `rm -rf ./package/lean/k3screenctrl`
+rm -rf ./package/lean/luci-app-syncdial
 
- `rm -rf ./package/lean/luci-app-syncdial`
+rm -rf ./package/lean/luci-lib-docker
 
- `rm -rf ./package/lean/luci-lib-docker`
+rm -rf ./package/lean/luci-theme-argon
 
- `rm -rf ./package/lean/luci-theme-argon`
+rm -rf ./package/lean/luci-app-jd-dailybonus
 
- `rm -rf ./package/lean/luci-app-jd-dailybonus`
-
- `rm -rf ./package/lean/luci-app-diskman`
+rm -rf ./package/lean/luci-app-diskman
+```
 
 然后拉取我的源码，`./scripts/feeds install -a`完成后再进行如下操作:
+```
+ln -s -f ../../../feeds/xiangfeidexiaohuo/k3screenctrl package/feeds/xiangfeidexiaohuo/k3screenctrl
+```
 
- `ln -s -f ../../../feeds/xiangfeidexiaohuo/k3screenctrl package/feeds/xiangfeidexiaohuo/k3screenctrl`
+### Lean等源码编译bypass前请先执行
+```
+find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
 
+find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
+```
 
-## files-补充汉化
+### files-补充汉化
+```
+cp -f ./feeds/xiangfeidexiaohuo/files/udpxy.lua ./feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi
 
- `cp -f ./feeds/xiangfeidexiaohuo/files/udpxy.lua ./feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi`
-
- `cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-app-mwan3/po/zh-cn`
+cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-app-mwan3/po/zh-cn
+```
 
 ## 插件说明：
 
@@ -78,3 +87,31 @@ Lean源码自带了某些老版本的插件，建议提前删除
 | luci-app-homeredirect | 端口转发工具 |
 | luci-app-serverchan | Server酱微信/Telegram 推送 |
 | luci-app-diskman | 磁盘管理 |
+| luci-app-eqos | eqos简单IP限速控制服务 |
+| v2ray | 某些翻墙插件的依赖v2ray控件 |
+
+## 致谢
+
+https://github.com/fw876/helloworld
+
+https://github.com/xiaorouji/openwrt-passwall
+
+https://github.com/garypang13/luci-app-bypass
+
+https://github.com/vernesong/OpenClash
+
+https://github.com/garypang13/luci-app-dnsfilter
+
+https://github.com/tty228/luci-app-serverchan
+
+https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
+
+https://github.com/jerrykuku/openwrt-package
+
+https://github.com/sirpdboy/sirpdboy-package
+
+https://github.com/rufengsuixing/luci-app-syncdial
+
+...等等
+
+
