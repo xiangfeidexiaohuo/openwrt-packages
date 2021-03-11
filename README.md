@@ -47,6 +47,21 @@ find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
 ```
 
+### docker for openwrt相关套件全部更新了，编译dockerman需要替换默认的老的依赖
+```
+rm -rf package/feeds/packages/containerd
+rm -rf package/feeds/packages/runc
+rm -rf package/feeds/packages/tini
+rm -rf package/feeds/packages/docker-ce
+rm -rf package/feeds/packages/libnetwork
+
+ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/containerd package/feeds/xiangfeidexiaohuo/containerd
+ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/docker-ce package/feeds/xiangfeidexiaohuo/docker-ce
+ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/runc package/feeds/xiangfeidexiaohuo/runc
+ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/tini package/feeds/xiangfeidexiaohuo/tini
+ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/libnetwork package/feeds/xiangfeidexiaohuo/libnetwork
+```
+
 ### files-补充汉化
 ```
 cp -f ./feeds/xiangfeidexiaohuo/files/udpxy.lua ./feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi
