@@ -7,20 +7,7 @@
 
 ## 使用方法：
 
-添加 `src-git xiangfeidexiaohuo https://github.com/xiangfeidexiaohuo/openwrt-packages` 到OpenWRT源码根目录feeds.conf.default文件
-
-然后执行
-```
-./scripts/feeds clean
-
-./scripts/feeds update -a 
-
-./scripts/feeds install -a
-```
-
-## 提醒
-
-### Lean源码自带了某些老版本的插件，建议提前删除
+### 1.Lean源码自带了某些老版本的插件，建议提前删除
 ```
 rm -rf ./package/lean/k3screenctrl
 
@@ -33,21 +20,29 @@ rm -rf ./package/lean/luci-theme-argon
 rm -rf ./package/lean/luci-app-jd-dailybonus
 
 rm -rf ./package/lean/luci-app-diskman
+
+rm -rf ./package/lean/luci-app-sfe  #若要用本源的luci-app-sfe(有Nat开关，无DNS加速)
+
 ```
 
-然后拉取我的源码，`./scripts/feeds install -a`完成后再进行如下操作:
+### 2.添加 `src-git xiangfeidexiaohuo https://github.com/xiangfeidexiaohuo/openwrt-packages` 到OpenWRT源码根目录feeds.conf.default文件
+
+然后执行
+```
+./scripts/feeds clean
+
+./scripts/feeds update -a 
+
+./scripts/feeds install -a
+```
+
+### 3.链接丢失的文件(不编译斐讯K3可略过)
+
 ```
 ln -s -f ../../../feeds/xiangfeidexiaohuo/k3screenctrl package/feeds/xiangfeidexiaohuo/k3screenctrl
 ```
 
-### Lean等源码编译bypass前请先执行
-```
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
-
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
-```
-
-### docker for openwrt相关套件全部更新了，编译dockerman需要替换默认的老的依赖
+### 4.docker for openwrt相关套件全部更新了，编译dockerman需要替换默认的老的依赖(不编译docker相关可略过)
 ```
 rm -rf package/feeds/packages/containerd
 rm -rf package/feeds/packages/runc
@@ -62,12 +57,21 @@ ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/tini package/feeds/xiangfeid
 ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/libnetwork package/feeds/xiangfeidexiaohuo/libnetwork
 ```
 
-### files-补充汉化
+### 5.Lean等源码编译bypass前请先执行(不编译bypass可略过)
+```
+find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
+
+find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
+```
+
+### 6.files-补充汉化
 ```
 cp -f ./feeds/xiangfeidexiaohuo/files/udpxy.lua ./feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi
 
 cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-app-mwan3/po/zh-cn
 ```
+
+### 7.然后开始编译
 
 ## 插件说明：
 
@@ -104,6 +108,7 @@ cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-ap
 | luci-app-diskman | 磁盘管理 |
 | luci-app-eqos | eqos简单IP限速控制服务 |
 | v2ray | 某些翻墙插件的依赖v2ray控件 |
+| luci-app-sfe | Turbo ACC网络加速(有Nat开关，无DNS加速) |
 
 ## 致谢
 
