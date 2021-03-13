@@ -10,29 +10,22 @@
 ### 1.Lean源码自带了某些老版本的插件，建议提前删除
 ```
 rm -rf ./package/lean/k3screenctrl
-
 rm -rf ./package/lean/luci-app-syncdial
-
 rm -rf ./package/lean/luci-lib-docker
-
 rm -rf ./package/lean/luci-theme-argon
-
 rm -rf ./package/lean/luci-app-jd-dailybonus
-
 rm -rf ./package/lean/luci-app-diskman
-
 rm -rf ./package/lean/luci-app-sfe  #若要用本源的luci-app-sfe(有Nat开关，无DNS加速)
 
 ```
 
-### 2.添加 `src-git xiangfeidexiaohuo https://github.com/xiangfeidexiaohuo/openwrt-packages` 到OpenWRT源码根目录feeds.conf.default文件
+### 2.添加本插件库到OpenWRT源码根目录feeds.conf.default文件
 
-然后执行
 ```
+echo -e "\nsrc-git xiangfeidexiaohuo https://github.com/xiangfeidexiaohuo/openwrt-packages" >> feeds.conf.default
+
 ./scripts/feeds clean
-
 ./scripts/feeds update -a 
-
 ./scripts/feeds install -a
 ```
 
@@ -49,7 +42,6 @@ rm -rf package/feeds/packages/runc
 rm -rf package/feeds/packages/tini
 rm -rf package/feeds/packages/docker-ce
 rm -rf package/feeds/packages/libnetwork
-
 ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/containerd package/feeds/xiangfeidexiaohuo/containerd
 ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/docker-ce package/feeds/xiangfeidexiaohuo/docker-ce
 ln -s -f ../../../feeds/xiangfeidexiaohuo/docker-op/runc package/feeds/xiangfeidexiaohuo/runc
@@ -67,7 +59,6 @@ find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -
 ### 6.files-补充汉化
 ```
 cp -f ./feeds/xiangfeidexiaohuo/files/udpxy.lua ./feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi
-
 cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-app-mwan3/po/zh-cn
 ```
 
@@ -77,6 +68,7 @@ cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-ap
 
 |插件名|功能|
 | :----: | :----: |
+| docker-op | openwrt的docker全套 |
 | openwrt-passwall | xiaorouji的passwall翻墙插件全套 |
 | helloworld/luci-app-ssr-plus | 大雕的ssr-plus翻墙插件(所需依赖passwall已包含) |
 | OpenClash/luci-app-openclash | OpenClash翻墙插件 |
@@ -107,7 +99,8 @@ cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-ap
 | luci-app-serverchan | Server酱微信/Telegram 推送 |
 | luci-app-diskman | 磁盘管理 |
 | luci-app-eqos | eqos简单IP限速控制服务 |
-| v2ray | 某些翻墙插件的依赖v2ray控件 |
+| v2ray | bypass依赖v2ray |
+| redsocks2 | bypass依赖redsocks2 |
 | luci-app-sfe | Turbo ACC网络加速(有Nat开关，无DNS加速) |
 
 ## 致谢
