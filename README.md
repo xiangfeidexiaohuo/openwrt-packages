@@ -85,5 +85,6 @@ cp -f ./feeds/xiangfeidexiaohuo/files/mwan3.po ./feeds/luci/applications/luci-ap
 | redsocks2 | bypass依赖redsocks2 |
 | luci-app-sfe | Turbo ACC网络加速(有Nat开关，无DNS加速) |
 | luci-app-advanced | 高级设置，可直接修改某些配置 |
+| luci-app-serverchan | Server酱微信/Telegram 推送的插件 |
 
 
