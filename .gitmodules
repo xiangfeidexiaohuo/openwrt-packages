@@ -1,0 +1,7 @@
+[submodule "ddnsto-openwrt"]
+	path = ddnsto-openwrt
+	url = https://github.com/linkease/ddnsto-openwrt
+	branch = main
+[submodule "linkease-openwrt"]
+	path = linkease-openwrt
+	url = https://github.com/linkease/linkease-openwrt

@@ -10,6 +10,8 @@
 |插件名|功能|
 | :----: | :----: |
 | docker-op | openwrt的docker全套 |
+| ddnsto-openwrt | ddnsto远程穿透 |
+| linkease-openwrt | 易有云 |
 | k3screenctrl | 斐讯K3屏幕套件 |
 | k3screenctrl_build | 斐讯K3屏幕套件 |
 | luci-app-k3screenctrl | 斐讯K3屏幕控制 |
@@ -38,11 +40,15 @@
 
 ### 1.Lean源码自带了某些老版本的插件，建议提前删除
 
-package/lean/k3screenctrl、luci-app-syncdial、luci-lib-docker、luci-app-diskman、luci-app-sfe
+package/lean/k3screenctrl、luci-app-syncdial、luci-app-diskman、luci-app-sfe
+
+package/lean/luci-lib-docker(编译dockerman的依赖,不编译docker相关可略过)
 
 ### 2.docker for openwrt相关套件全更新了，编译dockerman需要替换某些老依赖(不编译docker相关可略过)
 
-feeds/packages/utils/containerd、runc、tini、docker-ce、libnetwork、smartdns
+feeds/packages/utils/containerd、runc、tini、libnetwork
+
+feeds/packages/net/smartdns(smartdns依赖)
 
 ### 3.files-补充汉化
 
