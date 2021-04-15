@@ -10,8 +10,7 @@
 |插件名|功能|
 | :----: | :----: |
 | docker-op | openwrt的docker全套 |
-| ddnsto-openwrt | ddnsto远程穿透 |
-| linkease-openwrt | 易有云 |
+| linkease-ddnsto | 易有云/ddnsto远程穿透 |
 | k3screenctrl | 斐讯K3屏幕套件 |
 | k3screenctrl_build | 斐讯K3屏幕套件 |
 | luci-app-k3screenctrl | 斐讯K3屏幕控制 |
