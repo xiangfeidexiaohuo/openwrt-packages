@@ -25,12 +25,9 @@
 | luci-app-homeredirect | 端口转发工具 |
 | luci-app-diskman | 磁盘管理 |
 | luci-app-eqos | eqos简单IP限速控制服务 |
-| luci-app-sfe | Turbo ACC网络加速(有Nat开关，无DNS加速) |
 | luci-app-advanced | 高级设置，可直接修改某些配置 |
 | luci-app-serverchan | Server酱微信/Telegram 推送的插件 |
-| v2ray | bypass依赖v2ray |
 | redsocks2 | bypass依赖redsocks2 |
-| lua-maxminddb | bypass依赖lua-maxminddb |
 
 
 
