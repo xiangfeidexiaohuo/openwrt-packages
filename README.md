@@ -34,17 +34,11 @@
 
 ### 1.Lean源码自带了某些老版本的插件，建议提前删除
 
-package/lean/k3screenctrl、luci-app-syncdial、luci-app-diskman、luci-app-sfe
+package/lean/k3screenctrl、luci-app-syncdial、luci-app-diskman、luci-lib-docker
 
-package/lean/luci-lib-docker(编译dockerman的依赖,不编译docker相关可略过)
+feeds/packages/net/smartdns
 
-### 2.docker for openwrt相关套件全更新了，编译dockerman需要替换某些老依赖(不编译docker相关可略过)
-
-feeds/packages/utils/containerd、runc、tini、libnetwork
-
-feeds/packages/net/smartdns(smartdns依赖)
-
-### 3.files-补充汉化
+### 2.files-补充汉化
 
 udpxy.lua替换到feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi
 
