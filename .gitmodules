@@ -1,0 +1,4 @@
+[submodule "luci-app-adblock-plus"]
+	path = luci-app-adblock-plus
+	url = https://github.com/small-5/luci-app-adblock-plus
+	branch = master
